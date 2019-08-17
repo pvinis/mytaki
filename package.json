@@ -1,0 +1,12 @@
+{
+  "name": "mytaki",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ramda": "^0.26.1",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/ramda": "^0.26.19"
+  }
+}
