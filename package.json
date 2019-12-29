@@ -11,9 +11,9 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.25",
-    "@types/ramda": "^0.26.39",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.2.0"
+    "@types/jest": "24.0.25",
+    "@types/ramda": "0.26.39",
+    "jest": "24.9.0",
+    "ts-jest": "24.2.0"
   }
 }
