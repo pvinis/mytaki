@@ -1,0 +1,31 @@
+
+normal: a b c
+champion: f g h, i j k
+charged: A B C F G (attack with 3, or champion)
+wall: w
+
+[back
+A ff
+A ff
+Aabca
+front]
+
+[
+FF.
+FF.
+www
+]
+
+<<BACK
+aa
+aa
+ff
+ff
+<<FRONT
+->
+<<BACK
+..
+..
+FF
+FF
+<<FRONT
