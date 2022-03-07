@@ -7,12 +7,12 @@
   },
   "dependencies": {
     "multilines": "^1.0.2",
-    "ramda": "^0.26.1",
+    "ramda": "^0.28.0",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
     "@types/jest": "24.0.25",
-    "@types/ramda": "0.26.39",
+    "@types/ramda": "0.28.1",
     "jest": "24.9.0",
     "ts-jest": "24.2.0"
   }
