@@ -1,9 +1,10 @@
-import mls from 'multilines'
-import {parse} from './parser'
-import {solve} from './solver'
+import mls from "multilines"
+import {parse} from "./parser"
+import {solve} from "./solver"
 
-describe('solver', () => {
-	it('does nothing when nothing can happen', () => {
+
+describe("solver", () => {
+	it("does nothing when nothing can happen", () => {
 		expect(solve(parse(mls`
 			|<<FRONT
 			|.y......
@@ -14,7 +15,7 @@ describe('solver', () => {
 			|........
 			|<<BACK
 		`))).toStrictEqual({
-			side: 'bottom',
+			side: "bottom",
 			grid: mls`
 				|<<FRONT
 				|.y......
@@ -25,13 +26,13 @@ describe('solver', () => {
 				|........
 				|<<BACK
 			`,
-			legend: {y: 'arrows', g: 'arrows'},
+			legend: {y: "arrows", g: "arrows"},
 		})
 	})
 
-	it('solves an attack', () => {
+	it("solves an attack", () => {
 		expect(solve({
-			side: 'bottom',
+			side: "bottom",
 			grid: mls`
 				|<<FRONT
 				|.y......
@@ -42,9 +43,9 @@ describe('solver', () => {
 				|........
 				|<<BACK
 			`,
-			legend: ['y'],
+			legend: ["y"],
 		})).toStrictEqual({
-			side: 'bottom',
+			side: "bottom",
 			grid: mls`
 					|<<FRONT
 					|.Y......
@@ -55,14 +56,14 @@ describe('solver', () => {
 					|........
 					|<<BACK
 				`,
-			legend: {Y: 'arrows attack'},
+			legend: {Y: "arrows attack"},
 		})
 	})
 
-	it('solves multiple attacks', () => {
+	it("solves multiple attacks", () => {
 		expect(
 			solve({
-				side: 'bottom',
+				side: "bottom",
 				grid: mls`
 			|<<FRONT
 			|.y..g...
@@ -93,10 +94,10 @@ describe('solver', () => {
 			`)
 	})
 
-	it('solves multiple attacks with object', () => {
+	it("solves multiple attacks with object", () => {
 		expect(
 			solve({
-				side: 'bottom',
+				side: "bottom",
 				grid: mls`
 					|<<FRONT
 					|.y..g...
@@ -108,8 +109,8 @@ describe('solver', () => {
 					|<<BACK
 				`,
 				legend: {
-					y: 'arrows',
-					g: 'arrows',
+					y: "arrows",
+					g: "arrows",
 				},
 			}),
 		).toStrictEqual({
@@ -124,10 +125,10 @@ describe('solver', () => {
 			|<<BACK
 			`,
 			legend: {
-				y: 'arrows',
-				Y: 'arrows attack',
-				g: 'arrows',
-				G: 'arrows attack',
+				y: "arrows",
+				Y: "arrows attack",
+				g: "arrows",
+				G: "arrows attack",
 			},
 		})
 	})

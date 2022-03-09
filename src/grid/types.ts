@@ -1,10 +1,10 @@
 export interface Board {
-  top: BoardSide;
-  bottom: BoardSide;
+	top: BoardSide;
+	bottom: BoardSide;
 }
 
 export interface BoardSide {
-  side: 'top' | 'bottom';
-  grid: number[][];
-  legend: string[];
+	side: "top" | "bottom";
+	grid: number[][];
+	legend: string[];
 }

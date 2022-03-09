@@ -1,19 +1,19 @@
-import mls from 'multilines'
+import mls from "multilines"
+import {parse} from "./parser"
 
-import {parse} from './parser'
 
-describe('parser', () => {
-	it('base', () => {
+describe("parser", () => {
+	it("base", () => {
 		expect(parse(mls`
-				|<<BACK
-				|<<FRONT
+			|<<BACK
+			|<<FRONT
 			`),
 		).toStrictEqual({
-			side: 'top', grid: [], legend: ['.'],
+			side: "top", grid: [], legend: ["."],
 		})
 	})
 
-	it('basics', () => {
+	it("basics", () => {
 		expect(parse(mls`
 			|<<BACK
 			|....
@@ -21,13 +21,13 @@ describe('parser', () => {
 			|....
 			|<<FRONT
 		`)).toStrictEqual({
-			side: 'top',
+			side: "top",
 			grid: [
 				[0, 0, 0, 0],
 				[0, 0, 0, 0],
 				[0, 0, 0, 0],
 			],
-			legend: ['.'],
+			legend: ["."],
 		})
 		expect(parse(mls`
 			|<<BACK
@@ -36,13 +36,13 @@ describe('parser', () => {
 			|.a..
 			|<<FRONT
 		`)).toStrictEqual({
-			side: 'top',
+			side: "top",
 			grid: [
 				[0, 0, 0, 0],
 				[0, 0, 0, 0],
 				[0, 1, 0, 0],
 			],
-			legend: ['.', 'a'],
+			legend: [".", "a"],
 		})
 		expect(parse(mls`
 			|<<BACK
@@ -51,13 +51,13 @@ describe('parser', () => {
 			|aabb
 			|<<FRONT
 		`)).toStrictEqual({
-			side: 'top',
+			side: "top",
 			grid: [
 				[0, 0, 0, 0],
 				[0, 0, 0, 0],
 				[1, 1, 2, 2],
 			],
-			legend: ['.', 'a', 'b'],
+			legend: [".", "a", "b"],
 		})
 		expect(parse(mls`
 			|<<FRONT
@@ -69,7 +69,7 @@ describe('parser', () => {
 			|........
 			|<<BACK
 		`)).toStrictEqual({
-			side: 'bottom',
+			side: "bottom",
 			grid: [
 				[0, 1, 0, 0, 1, 0, 0, 0],
 				[0, 1, 0, 0, 1, 0, 0, 0],
@@ -78,7 +78,7 @@ describe('parser', () => {
 				[0, 0, 0, 0, 0, 0, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0, 0],
 			],
-			legend: ['.', 'y', 'g'],
+			legend: [".", "y", "g"],
 		})
 	})
 })

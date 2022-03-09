@@ -1,7 +1,8 @@
-import {BoardSide} from './types';
+import {BoardSide} from "./types"
+
 
 export function solve({side, grid, legend}: BoardSide) {
-  const grid = GridParser(grid);
+	const grid = GridParser(grid)
 
-  return {side, grid, legend};
+	return {side, grid, legend}
 }
