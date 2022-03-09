@@ -4,6 +4,13 @@ champion: f g h, i j k
 charged: A B C F G (attack with 3, or champion)
 wall: w
 
+single thing: a b c
+attack: A B C
+
+
+
+
+
 [back
 A ff
 A ff
@@ -29,3 +36,25 @@ ff
 FF
 FF
 <<FRONT
+
+
+
+
+single player:
+match 1:
+arrows arrows arrows
+
+
+y: yellow, arrows
+g: green, arrows
+<<FRONT
+.y..yg..
+.y...g..
+.g......
+........
+........
+........
+<<BACK
+
+
+
