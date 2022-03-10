@@ -2,14 +2,18 @@ import R from "ramda"
 import { BoardSide } from "./types"
 
 
-export function parse(snapshot: string): BoardSide {
+export function parse(snapshot: string, forcedLegend?: string): BoardSide {
 	const lines = snapshot.split("\n")
 
 	if (lines === []) {
 		throw new Error("Empty snapshot")
 	}
 
-	const boardSide: BoardSide = { side: "bottom", grid: [], legend: ["."] }
+	const boardSide: BoardSide = {
+		side: "bottom",
+		grid: [],
+		legend: forcedLegend?.split("") ?? ["."],
+	}
 
 	if (lines[0] === "<<BACK" && lines[lines.length - 1] === "<<FRONT") {
 		boardSide.side = "top"

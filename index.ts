@@ -1,12 +1,13 @@
 import * as R from "ramda"
 
+
 const Player = (minionA, minionB, minionC) => ({
-	m: {a: minionA, b: minionB, c: minionC, EMPTY: 0},
+	m: { a: minionA, b: minionB, c: minionC, EMPTY: 0 },
 })
 
 const bottomPlayer = Player(1, 2, 3)
 
-const {m} = bottomPlayer
+const { m } = bottomPlayer
 
 const Grid = (config, initialGrid) => {
 	let grid = initialGrid
@@ -23,7 +24,7 @@ const Grid = (config, initialGrid) => {
 	}
 }
 
-const bottom = Grid({rows: 3, columns: 4}, [
+const bottom = Grid({ rows: 3, columns: 4 }, [
 	[m.a, m.b, m.EMPTY, m.EMPTY],
 	[m.c, m.c, m.a, m.EMPTY],
 	[m.EMPTY, m.EMPTY, m.EMPTY, m.EMPTY],
