@@ -1,5 +1,5 @@
 import R from "ramda"
-import {BoardSide} from "./types"
+import { BoardSide } from "./types"
 
 
 export function parse(snapshot: string): BoardSide {
@@ -9,7 +9,7 @@ export function parse(snapshot: string): BoardSide {
 		throw new Error("Empty snapshot")
 	}
 
-	const boardSide: BoardSide = {side: "bottom", grid: [], legend: ["."]}
+	const boardSide: BoardSide = { side: "bottom", grid: [], legend: ["."] }
 
 	if (lines[0] === "<<BACK" && lines[lines.length - 1] === "<<FRONT") {
 		boardSide.side = "top"

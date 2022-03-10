@@ -1,5 +1,5 @@
 import mls from "multilines"
-import {parse} from "./parser"
+import { parse } from "./parser"
 
 
 describe("parser", () => {

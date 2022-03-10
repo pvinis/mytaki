@@ -1,6 +1,6 @@
 import mls from "multilines"
-import {parse} from "./parser"
-import {solve} from "./solver"
+import { parse } from "./parser"
+import { solve } from "./solver"
 
 
 describe("solver", () => {
@@ -26,7 +26,7 @@ describe("solver", () => {
 				|........
 				|<<BACK
 			`,
-			legend: {y: "arrows", g: "arrows"},
+			legend: { y: "arrows", g: "arrows" },
 		})
 	})
 
@@ -56,7 +56,7 @@ describe("solver", () => {
 					|........
 					|<<BACK
 				`,
-			legend: {Y: "arrows attack"},
+			legend: { Y: "arrows attack" },
 		})
 	})
 
